@@ -14,6 +14,9 @@ include_once('koneksi.php');
 </head>
 
 <body>
+
+    <a href="formSewa.php">Tambah Sewa</a>
+
     <table border="1px">
 
         <tr>
@@ -23,7 +26,7 @@ include_once('koneksi.php');
             <th>Tanggal Sewa</th>
             <th>Durasi</th>
             <th>Tanggal Selesai</th>
-            <th>Action</th>
+            <th colspan="2">Action</th>
         </tr>
 
         <?php
@@ -48,6 +51,7 @@ include_once('koneksi.php');
                 <td><?= $row["durasi"]; ?></td>
                 <td><?= $tanggal_selesai; ?></td>
                 <td><a href="formEditSewa.php?id=<?= $row["id"]; ?>">Edit</a></td>
+                <td><a href="prosesDeleteSewa.php?id=<?= $row["id"]; ?>">Delete</a></td>
             </tr>
 
         <?php
