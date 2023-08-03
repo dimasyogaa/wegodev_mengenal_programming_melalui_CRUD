@@ -8,12 +8,14 @@ $judul = $_POST['judul'];
 $penyewa = $_POST['penyewa'];
 $durasi = $_POST['durasi'];
 
-$tanggal_sewa = date('Y-m-d'); // 2023-08-01
+
 
 mysqli_query(
     $koneksi,
-    "INSERT INTO sewa (judul, penyewa, durasi, tanggal_sewa)
-     VALUES ('$judul','$penyewa','$durasi','$tanggal_sewa')"
+    "UPDATE sewa SET judul = '$judul',
+                     penyewa = '$penyewa',
+                     durasi = '$durasi'
+                     WHERE id = '$id'"
 );
 
 header("location: index.php ");

@@ -47,7 +47,7 @@ include_once('koneksi.php');
                 <td><?= $row["tanggal_sewa"]; ?></td>
                 <td><?= $row["durasi"]; ?></td>
                 <td><?= $tanggal_selesai; ?></td>
-                <td>&nbsp;</td>
+                <td><a href="formEditSewa.php?id=<?= $row["id"]; ?>">Edit</a></td>
             </tr>
 
         <?php
